@@ -108,7 +108,7 @@ print(square(np.array([1, 2, 3, 4, 5])))  # attendu: [ 1  4  9 16 25]
 
 # %%
 def sin_values():
-    X = np.arange(0, 2*np.pi, 0.1) # 👈 Insérez le code
+    X = np.arange(0, (2*np.pi)+0.05, 0.1) # 👈 Insérez le code
     return np.sin(X)
 sin_values = np.vectorize(sin_values)
 
@@ -177,6 +177,7 @@ print(g_vectorized(np.array([1, -2, 3, -4, 5])))  # attendu: [ 1 -2  9 -4 25]
 
 # %%
 def select_even(arr):
+    
     return arr[1::2]  # 👈 Insérez le code ici
 
 
