@@ -193,7 +193,7 @@ print(
 
 # %%
 def replace_negatives(arr):
-    arr[1::2] = 0  # 👈 Insérez le code ici
+    arr[arr < 0] = 0  # 👈 Insérez le code ici
     return arr
 
 print(replace_negatives(np.array([1, -2, 3, -4, 5])))  # attendu: [1 0 3 0 5]
