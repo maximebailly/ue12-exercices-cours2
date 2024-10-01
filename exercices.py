@@ -177,8 +177,10 @@ print(g_vectorized(np.array([1, -2, 3, -4, 5])))  # attendu: [ 1 -2  9 -4 25]
 
 # %%
 def select_even(arr):
-    
-    return arr[1::2]  # 👈 Insérez le code ici
+    mask = arr[arr % 2 == 0]
+    print(mask)
+    arr[mask] = 0
+    return arr  # 👈 Insérez le code ici
 
 
 print(
@@ -280,7 +282,7 @@ def mean(arr):
 
 # %%
 def sum_odd_columns(arr): 
-    return np.sum(arr[::,::2])  # 👈 Insérez le code ici
+    return np.sum(arr[::,1::2])  # 👈 Insérez le code ici
 
 
 print(sum_odd_columns(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])))  # attendu: 15
